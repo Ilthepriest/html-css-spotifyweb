@@ -10,9 +10,11 @@
     --txt_gray: rgba(125, 127, 132, 1);
     --evidence: rgba(173, 255, 47, 1);
     --txt_white: rgba(254, 254, 254, 1);
-
 }
 
+h3{
+    color: white; 
+}
 
 
 /* Inizio header */
@@ -29,9 +31,87 @@ header{
 /* Inizio aside */
 
 aside{
-    max-width: 230px;
     height: calc(100vh - 91px);
-    background-color: orangered;
+    background-color: var(--bg_color);
+    width: 230px;
+    position: relative;
+}
+
+.logo{
+    width: 133px;
+    height: 91px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.home,
+.playlist,
+.install{
+    padding: 20px;
+    padding-top: 0;
+}
+
+.home img,
+.playlist img,
+.install img{
+    width: 20px;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+ul li{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-top: 0;
+    column-gap: 10px; 
+}
+
+ul li a{
+    text-decoration: none;
+    color: var(--txt_gray); 
+}
+
+.square_gray{
+    width: 35px;
+    height: 35px;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.square_gray i{
+    color: black;
+    font-size: 25px;
+}
+
+.install{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 0;
+}
+
+hr{
+    margin: 10px 0;
+}
+
+.circle_gray{
+    width: 28px;
+    height: 28px;
+    background-color: gray;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Inizio main */
@@ -44,6 +124,7 @@ main{
     right: 0;
     top: 91px;
 }
+
 
 /* Inizio footer */
 
