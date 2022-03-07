@@ -3,3 +3,53 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root{
+    --bg_color: rgba(8, 11, 18, 1);
+    --bg_footer: rgba(40, 40, 40, 1);
+    --txt_gray: rgba(125, 127, 132, 1);
+    --evidence: rgba(173, 255, 47, 1);
+    --txt_white: rgba(254, 254, 254, 1);
+
+}
+
+
+
+/* Inizio header */
+
+header{
+    background-color: aqua;
+    width: calc(100% - 230px);
+    height: 91px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* Inizio aside */
+
+aside{
+    max-width: 230px;
+    height: calc(100vh - 91px);
+    background-color: orangered;
+}
+
+/* Inizio main */
+
+main{
+    background-color: yellow;
+    width: calc(100% - 230px);
+    height: calc(100vh - 181px);
+    position: absolute;
+    right: 0;
+    top: 91px;
+}
+
+/* Inizio footer */
+
+footer{
+    width: 100%;
+    background-color: green;
+    height: 91px;
+}
+
