@@ -13,8 +13,27 @@
     --txt_white: rgba(254, 254, 254, 1);
 }
 
-h3, h4, div{
+body{
+    font-family: 'Kanit', sans-serif;
+
+}
+
+h1, h2, h3, h4, div{
     color: white; 
+}
+ 
+h1{
+    font-size: 27px;
+}
+
+h2{
+    font-size: 16.5px;
+}
+
+h4{
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
 .txt{
@@ -30,7 +49,6 @@ header{
     position: absolute;
     right: 0;
     top: 0;
-    
 }
 
 .button_upgrade{
@@ -46,9 +64,14 @@ header{
     align-items: center;
     right: 0;
     top: 20px;
-    
 }
 
+.button_upgrade:hover{
+    width: 220px;
+    height: 40px;
+    font-size: 20px;
+
+}
 
 /* Inizio aside */
 
@@ -64,6 +87,19 @@ aside{
     height: 91px;
     padding-top: 20px;
     padding-left: 20px;
+}
+
+.logo_mobile{
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+    display: none;
+}
+
+
+
+.color_white{
+    color: white;
 }
 
 .playlist{
@@ -82,7 +118,7 @@ aside{
 .home img,
 .playlist img,
 .install img{
-    width: 20px;
+    width: 30px;
 }
 
 ul{
@@ -130,22 +166,38 @@ ul li a{
     background-color: black;
 }
 
+.install .secondo a{
+    color: white;
+}
+
 
 hr{
     margin: 10px 0;
 }
 
 .circle_gray{
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
     background-color: gray;
     border-radius: 50%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
+.circle_gray img{
+    height: 80%;
+    width: 80%;
+    object-fit: contain;
+}
 
+aside a:hover{
+    color: white;
+}
+
+aside .playlist .square_gray:hover{
+    background-color: white;
+}
 
 /* Inizio main */
 
@@ -156,8 +208,152 @@ main{
     position: absolute;
     right: 0;
     top: 91px;
+    overflow-y: auto;
 }
 
+main nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+nav ul li{
+    font-weight: 900;
+    text-transform: uppercase;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column; 
+}
+
+.colonna{
+    display: flex;
+    flex-direction: column;
+}
+
+.evidence{
+    width: 30%;
+    height: 2px;
+    background-color: var(--evidence);
+    margin-top: 2px;
+}
+
+.big_container{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.first_row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.second_row{
+    display: flex;
+    flex-direction: row; 
+    column-gap: 15px;
+}
+
+.three_row{
+    display: flex;
+    flex-direction: row; 
+    column-gap: 15px;
+}
+
+.three_row .card1 img {
+    border-radius: 50%;
+}
+
+.three_row .card2 img {
+    border-radius: 50%;
+}
+
+.card1,
+.card2,
+.card3,
+.card4,
+.card5,
+.card6{
+    width: 179px;
+    text-align: center;
+    position: relative;
+}
+
+.card1 img,
+.card2 img,
+.card3 img,
+.card4 img,
+.card5 img,
+.card6 img{
+   width: 100%;
+   
+}
+
+.player_hover{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    visibility: hidden;
+}
+
+.big_container h2{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.big_container h1{
+    margin-bottom: 20px;
+}
+
+.big_container .margin_top{
+    margin-top: 20px;
+}
+
+main nav ul li a:hover{
+    color: white;
+}
+
+.big_container .first_row .card1:hover .player_hover,
+.big_container .first_row .card2:hover .player_hover,
+.big_container .first_row .card3:hover .player_hover,
+.big_container .first_row .card4:hover .player_hover,
+.big_container .first_row .card5:hover .player_hover,
+.big_container .first_row .card6:hover .player_hover{
+    visibility: visible;
+}
+
+.big_container .first_row .card1 img:hover,
+.big_container .first_row .card2 img:hover,
+.big_container .first_row .card3 img:hover,
+.big_container .first_row .card4 img:hover,
+.big_container .first_row .card5 img:hover,
+.big_container .first_row .card6 img:hover{
+    filter: opacity(0.5);
+}
+
+.big_container .second_row .card1:hover .player_hover,
+.big_container .second_row .card2:hover .player_hover{
+    visibility: visible;
+}
+
+.big_container .second_row .card1 img:hover,
+.big_container .second_row .card2 img:hover{
+    filter: opacity(0.5);
+}
+
+.big_container .three_row .card1:hover .player_hover,
+.big_container .three_row .card2:hover .player_hover{
+    visibility: visible;
+}
+
+.big_container .three_row .card1 img:hover,
+.big_container .three_row .card2 img:hover{
+    filter: opacity(0.5);
+}
 
 /* Inizio footer */
 
@@ -179,6 +375,13 @@ footer{
     column-gap: 20px;
 }
 
+.container_left h4{
+    font-size: 14px;
+}
+
+.container_left .txt{
+    font-size: 14px;
+}
 
 .name_sound{
     width: 43px;
@@ -210,7 +413,7 @@ footer{
 
 .container_center .font_size{
     color: white;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .column{
@@ -218,7 +421,7 @@ footer{
     height: 100%;
     flex-direction: column;
     justify-content: center;
-    row-gap: 15px;
+    row-gap: 20px;
 }
 
 .bar{
@@ -235,6 +438,25 @@ footer{
     background-color: white;
     border-radius: 10px;
     margin-left: 15px;
+    position: relative;
+}
+
+.circle_volume,
+.circle_volume2{
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -7px;
+    right: 0px;
+    visibility: hidden;
+}
+
+.circle_volume2{
+    width: 10px;
+    height: 10px;
+    top: -2.5px;
 }
 
 .bar_gray{
@@ -244,7 +466,6 @@ footer{
     border-radius: 0px 10px 10px 0px;
     margin-right: 15px;
 }
-
 
 .container_right{
     height: 100%;
@@ -263,12 +484,45 @@ footer{
     align-items: center;
 }
 
+.bar2 .bar_white{
+    margin-left: 0px;
+}
+
 .m_right{
     margin-right: 0px;
 }
 
+.container_left .album div:hover{
+    color: white;
+}
 
-/* mediaquery */
+.bar .bar_white:hover{
+    background-color: var(--evidence);
+}
+
+.bar .bar_white:hover .circle_volume{
+    visibility: visible;
+}
+
+.column .container_center > .zoom:hover{
+    font-size: 40px;
+}
+
+.container_right .bar2 .bar_white:hover{
+    background-color: var(--evidence);
+}
+
+.container_right .bar2 .bar_white:hover .circle_volume2{
+    visibility: visible;
+}
+
+
+.container_left .like i:hover{
+    color: white;
+}
+
+
+/* mediaquery height */
 @media screen and (max-height: 500px){
     .install ul .secondo{
         display: none;
@@ -283,14 +537,8 @@ footer{
 
     .install ul hr{
         display: none;
-}
-}
-
-/* @media screen and (max-height: 454px){
-    .playlist{
-        position: static;
     }
-} */
+}
 
 @media screen and (max-height: 660px) {
     .playlist{
@@ -300,8 +548,115 @@ footer{
     
 }
 
+/* mediaquery width */
 
- 
 
+@media screen and (max-width: 1400px) {
+    .first_row{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: wrap;
+        justify-content: flex-start;
+        column-gap: 20px;
+    }
+    
+}
+
+
+@media screen and (max-width: 1400px) {
+    main nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: wrap;
+        justify-content: center;
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+    
+}
+
+@media screen and (max-width: 1400px) {
+    .first_row,
+    .second_row,
+    .three_row{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: wrap;
+        column-gap: 20px;
+    }
+}
+
+
+@media screen and (max-width: 660px) {
+    aside{
+        width: 100px;
+        transition: width linear 1s;
+    }
+    
+}
+
+@media screen and (max-width: 660px) {
+    main{
+        width: calc(100% - 100px);
+        transition: width linear 1s;
+    }
+    
+}
+
+@media screen and (max-width: 660px) {
+    header{
+        width: calc(100% - 100px);
+        transition: width linear 1s;
+    }
+    
+}
+
+
+@media screen and (max-width: 660px) {
+    .home a,
+    .playlist,
+    .logo,
+    .install a{
+        display: none;
+    }
+  
+}
+
+@media screen and (max-width: 660px) {
+    .logo_mobile{
+        display: block;
+        
+    }
+  
+}
+
+
+@media screen and (max-width: 1100px) {
+    .container_left,
+    .container_center,
+    .container_right{
+        column-gap: 10px;  
+    }
+
+    .column .bar{
+        width: 300px;
+        transition: width  linear 1s;
+    }
+  
+}
+
+@media screen and (max-width: 760px) {
+    .container_left,
+    .container_center,
+    .container_right{
+        column-gap: 10px;  
+    }
+
+    .column .bar{
+        width: 200px;
+        transition: width  linear 1s;
+    }
+  
+}
 
 
