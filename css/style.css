@@ -49,6 +49,7 @@ header{
     position: absolute;
     right: 0;
     top: 0;
+    transition: width linear 1s;
 }
 
 .button_upgrade{
@@ -80,6 +81,7 @@ aside{
     background-color: var(--bg_color);
     width: 230px;
     position: relative;
+    transition: width linear 1s;
 }
 
 .logo{
@@ -209,6 +211,7 @@ main{
     right: 0;
     top: 91px;
     overflow-y: auto;
+    transition: width linear 1s;
 }
 
 main nav ul{
@@ -430,6 +433,7 @@ footer{
     display: flex;
     border-radius: 10px;
     align-items: center;
+    position: relative;
 }
 
 .bar_white{
@@ -519,6 +523,76 @@ footer{
 
 .container_left .like i:hover{
     color: white;
+}
+
+
+.bar_music,
+.bar_music2,
+.bar_music3,
+.bar_music4,
+.bar_music5{
+    width: 4px;
+    height: 5px;
+    background-color: var(--evidence);
+}
+
+.bar_music2{
+    height: 20px; 
+}
+
+.bar_music3{
+    height: 30px;
+}
+
+.bar_music4{ 
+    height: 20px;
+}
+
+.bar_music5{
+    height: 5px;
+}
+
+.effect_music,
+.effect_music2,
+.effect_music3,
+.effect_music4,
+.effect_music5{
+    animation: sound 1s linear infinite;
+    position: absolute;
+    right: -45px;
+    margin-left: 10px;
+}
+
+.effect_music2{
+    right: -50px;
+}
+
+.effect_music3{
+    right: -55px;
+}
+
+.effect_music4{
+    right: -60px;
+}
+
+.effect_music5{
+    right: -65px;
+}
+
+
+@keyframes sound{
+    0%{
+        background-color: var(--bg_footer);
+    }
+
+    50%{
+        background-color: lightgreen; 
+    }
+
+    100%{
+        height: 10px;
+        color: var(--evidence);  
+    }
 }
 
 
