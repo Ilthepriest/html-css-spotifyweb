@@ -149,7 +149,6 @@ ul li a{
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 
 .square_gray i{
@@ -164,7 +163,6 @@ ul li a{
     left: 0;
     padding-bottom: 0;
     background-color: var(--bg_color);
-    
 }
 
 .install .secondo a{
@@ -192,14 +190,11 @@ hr{
     object-fit: contain;
 }
 
-
-
 .rotate{
     transform: rotate(90Deg);
     position: absolute;
     left: -12px;
     top: 110px;
-    
 }
 
 .evidence2{
@@ -270,7 +265,6 @@ nav ul li{
     display: flex;
     flex-direction: row;
     column-gap: 15px;
-    
 }
 
 .second_row{
@@ -293,25 +287,14 @@ nav ul li{
     border-radius: 50%;
 }
 
-.card1,
-.card2,
-.card3,
-.card4,
-.card5,
-.card6{
+[class*= "card"]{
     width: 179px;
     text-align: center;
     position: relative;
 }
 
-.card1 img,
-.card2 img,
-.card3 img,
-.card4 img,
-.card5 img,
-.card6 img{
-   width: 100%;
-   
+img[target]{
+    width: 100%;
 }
 
 .player_hover{
@@ -340,41 +323,11 @@ main nav ul li a:hover{
     color: white;
 }
 
-.big_container .first_row .card1:hover .player_hover,
-.big_container .first_row .card2:hover .player_hover,
-.big_container .first_row .card3:hover .player_hover,
-.big_container .first_row .card4:hover .player_hover,
-.big_container .first_row .card5:hover .player_hover,
-.big_container .first_row .card6:hover .player_hover{
+[class*= "card"]:hover .player_hover{
     visibility: visible;
 }
-
-.big_container .first_row .card1 img:hover,
-.big_container .first_row .card2 img:hover,
-.big_container .first_row .card3 img:hover,
-.big_container .first_row .card4 img:hover,
-.big_container .first_row .card5 img:hover,
-.big_container .first_row .card6 img:hover{
-    filter: opacity(0.5);
-}
-
-.big_container .second_row .card1:hover .player_hover,
-.big_container .second_row .card2:hover .player_hover{
-    visibility: visible;
-}
-
-.big_container .second_row .card1 img:hover,
-.big_container .second_row .card2 img:hover{
-    filter: opacity(0.5);
-}
-
-.big_container .three_row .card1:hover .player_hover,
-.big_container .three_row .card2:hover .player_hover{
-    visibility: visible;
-}
-
-.big_container .three_row .card1 img:hover,
-.big_container .three_row .card2 img:hover{
+ 
+img[target]:hover{
     filter: opacity(0.5);
 }
 
@@ -498,7 +451,6 @@ footer{
     align-items: center;
     padding: 15px;
     column-gap: 20px;
-
 }
 
 .bar2{
@@ -541,22 +493,18 @@ footer{
     visibility: visible;
 }
 
-
 .container_left .like i:hover{
     color: white;
 }
 
-.bar_music,
-.bar_music2,
-.bar_music3,
-.bar_music4,
-.bar_music5{
+[class*= "bar_music"]{
     width: 4px;
     height: 5px;
     background-color: var(--evidence);
-}
+} 
 
-.bar_music2{
+.bar_music2,
+.bar_music4{
     height: 20px; 
 }
 
@@ -564,19 +512,11 @@ footer{
     height: 30px;
 }
 
-.bar_music4{ 
-    height: 20px;
-}
-
 .bar_music5{
     height: 5px;
 }
 
-.effect_music,
-.effect_music2,
-.effect_music3,
-.effect_music4,
-.effect_music5{
+[class*= "effect_music"]{
     animation: sound 1s linear infinite;
     position: absolute;
     right: -45px;
@@ -598,7 +538,6 @@ footer{
 .effect_music5{
     right: -65px;
 }
-
 
 @keyframes sound{
     0%{
@@ -622,17 +561,15 @@ footer{
     .playlist{
         overflow-y: scroll;
     }
-    
 }
 
-@media screen and (max-height: 500px){
+@media screen and (max-height: 600px){
     .install ul .secondo{
         display: none;
     }
-
 }
 
-@media screen and (max-height:400px) {
+@media screen and (max-height:500px) {
     .install ul .primo{
             display: none;
     }
@@ -640,29 +577,23 @@ footer{
     .install ul hr{
         display: none;
     }
-}
 
-
-@media screen and (max-height: 500px) {
     header{
         display: none; 
     }
-}
 
-@media screen and (max-height: 500px) {
-   main{
-       position: absolute;
-       transition: top linear 1s;
-       top: 0;
-       right: 0;
-       height: 100vh;
-   }
+    main{
+        position: absolute;
+        transition: top linear 1s;
+        top: 0;
+        right: 0;
+        height: 100vh;
+    }
 }
-
 
 /* mediaquery width */
 
-
+/* Desktop */
 
 @media screen and (max-width: 1390px) {
     main nav ul {
@@ -673,10 +604,7 @@ footer{
         column-gap: 20px;
         row-gap: 20px;
     }
-    
-}
 
-@media screen and (max-width: 1390px) {
     .first_row,
     .second_row,
     .three_row{
@@ -684,7 +612,7 @@ footer{
         flex-wrap: wrap;
         flex-direction: wrap;
         column-gap: 15px;
-    }
+    } 
 }
 
 
@@ -699,20 +627,13 @@ footer{
         width: 300px;
         transition: width  linear 1s;
     }
-  
-}
 
-@media screen and (max-width: 1100px) {
-    .card1,
-    .card2,
-    .card3,
-    .card4,
-    .card5,
-    .card6{
+    [class*= "card"]{
         width: 137px; 
     }
-   
- }
+}
+
+/* md */
 
 @media screen and (max-width: 760px) {
     .container_left,
@@ -725,47 +646,28 @@ footer{
         width: 200px;
         transition: width  linear 1s;
     }
-  
-}
 
-@media screen and (max-width: 760px) {
-    .card1,
-    .card2,
-    .card3,
-    .card4,
-    .card5,
-    .card6{
-        width: 168px;
+    [class*= "card"]{
+        width: 168px; 
     }
-   
- }
+}
 
  @media screen and (max-width: 637px) {
     aside{
         width: 50px;
         transition: width linear 1s;
     }
-    
-}
 
-@media screen and (max-width: 637px) {
     main{
         width: calc(100% - 50px);
         transition: width linear 1s;
     }
-    
-}
 
-@media screen and (max-width: 637px) {
     header{
         width: calc(100% - 50px);
         transition: width linear 1s;
     }
-    
-}
 
-
-@media screen and (max-width: 637px) {
     .home a,
     .playlist,
     .logo,
@@ -773,29 +675,15 @@ footer{
     .install hr{
         display: none;
     }
-  
-}
 
-@media screen and (max-width: 637px) {
     .logo_mobile{
         display: block;
     }
-  
-}
 
-@media screen and (max-width: 637px) {
-   .card1,
-   .card2,
-   .card3,
-   .card4,
-   .card5,
-   .card6{
-       width: 200px;
-   }
-  
-}
+    [class*= "card"]{
+        width: 200px; 
+    }
 
-@media screen and (max-width:637px) {
     .home,
     .playlist,
     .install{
@@ -806,9 +694,7 @@ footer{
         margin-top: 5px;
         padding-right: 1px;
     }
-}
 
-@media screen and (max-width: 637px) {
     .container_left,
     .container_center,
     .container_right{
@@ -837,11 +723,7 @@ footer{
         margin-left: 10px;
     }
 
-    .bar_music,
-    .bar_music2,
-    .bar_music3,
-    .bar_music4,
-    .bar_music5{
+    [class*= "bar_music"]{
         display: none;
     }
 
@@ -849,6 +731,8 @@ footer{
         display: none;
     }
 }
+
+/* s-xs */
 
 @media screen and (max-width:480px), (max-width:350px) {
     .container_right{
@@ -859,13 +743,8 @@ footer{
        padding: 15px;
    }
 
-   .card1,
-   .card2,
-   .card3,
-   .card4,
-   .card5,
-   .card6{
-       width: 250px;
+   [class*= "card"]{
+        width: 250px;
    }
 }
 
