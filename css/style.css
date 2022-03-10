@@ -1,3 +1,5 @@
+/* Common */
+
 *{
     margin: 0;
     padding: 0;
@@ -105,7 +107,6 @@ aside{
 .playlist{
     height: 50%;
     position: relative;
-    z-index: 0;
 }
 
 .home,
@@ -162,8 +163,8 @@ ul li a{
     bottom: 0px;
     left: 0;
     padding-bottom: 0;
-    z-index: 1;
-    background-color: black;
+    background-color: var(--bg_color);
+    
 }
 
 .install .secondo a{
@@ -172,6 +173,7 @@ ul li a{
 
 hr{
     margin: 10px 0;
+    width: 100%;
 }
 
 .circle_gray{
@@ -188,6 +190,26 @@ hr{
     height: 80%;
     width: 80%;
     object-fit: contain;
+}
+
+
+
+.rotate{
+    transform: rotate(90Deg);
+    position: absolute;
+    left: -12px;
+    top: 110px;
+    
+}
+
+.evidence2{
+    width: 34px;
+    height: 4px;
+    background-color: var(--evidence);
+}
+
+.border_left{
+    border-left: 2px solid var(--evidence);
 }
 
 aside a:hover{
@@ -790,7 +812,7 @@ footer{
     .container_left,
     .container_center,
     .container_right{
-        column-gap: 10px;
+        column-gap: 8px;
     }
 
     .column .bar{
@@ -802,9 +824,17 @@ footer{
         width: 50px;
     }
 
-    footer i,
+    
     .column .container_center i{
+        font-size: 22px;
+    }
+
+    .container_right i{
         font-size: 15px;
+    }
+
+    .like i{
+        margin-left: 10px;
     }
 
     .bar_music,
@@ -814,6 +844,28 @@ footer{
     .bar_music5{
         display: none;
     }
+
+    .evidence2{
+        display: none;
+    }
 }
 
+@media screen and (max-width:480px), (max-width:350px) {
+    .container_right{
+        display: none;
+    }
+
+   .column{
+       padding: 15px;
+   }
+
+   .card1,
+   .card2,
+   .card3,
+   .card4,
+   .card5,
+   .card6{
+       width: 250px;
+   }
+}
 
