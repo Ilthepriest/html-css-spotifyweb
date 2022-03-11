@@ -613,6 +613,10 @@ footer{
         flex-direction: wrap;
         column-gap: 15px;
     } 
+
+    [class*= "card"]{
+        margin-bottom: 20px;
+    }
 }
 
 
@@ -745,6 +749,14 @@ footer{
 
    [class*= "card"]{
         width: 250px;
+   }
+
+   .first_row,
+   .second_row,
+   .three_row{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
    }
 }
 
